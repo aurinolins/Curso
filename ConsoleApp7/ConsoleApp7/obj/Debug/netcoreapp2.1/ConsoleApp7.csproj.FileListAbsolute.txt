@@ -1,0 +1,11 @@
+C:\Curso\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp2.1\ConsoleApp7.csprojAssemblyReference.cache
+C:\Curso\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp2.1\ConsoleApp7.csproj.CoreCompileInputs.cache
+C:\Curso\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp2.1\ConsoleApp7.AssemblyInfoInputs.cache
+C:\Curso\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp2.1\ConsoleApp7.AssemblyInfo.cs
+C:\Curso\ConsoleApp7\ConsoleApp7\bin\Debug\netcoreapp2.1\ConsoleApp7.deps.json
+C:\Curso\ConsoleApp7\ConsoleApp7\bin\Debug\netcoreapp2.1\ConsoleApp7.runtimeconfig.json
+C:\Curso\ConsoleApp7\ConsoleApp7\bin\Debug\netcoreapp2.1\ConsoleApp7.runtimeconfig.dev.json
+C:\Curso\ConsoleApp7\ConsoleApp7\bin\Debug\netcoreapp2.1\ConsoleApp7.dll
+C:\Curso\ConsoleApp7\ConsoleApp7\bin\Debug\netcoreapp2.1\ConsoleApp7.pdb
+C:\Curso\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp2.1\ConsoleApp7.dll
+C:\Curso\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp2.1\ConsoleApp7.pdb

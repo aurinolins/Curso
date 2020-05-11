@@ -1,0 +1,11 @@
+C:\Curso\ConsoleApp13\ConsoleApp13\bin\Debug\netcoreapp2.1\ConsoleApp13.deps.json
+C:\Curso\ConsoleApp13\ConsoleApp13\bin\Debug\netcoreapp2.1\ConsoleApp13.runtimeconfig.json
+C:\Curso\ConsoleApp13\ConsoleApp13\bin\Debug\netcoreapp2.1\ConsoleApp13.runtimeconfig.dev.json
+C:\Curso\ConsoleApp13\ConsoleApp13\bin\Debug\netcoreapp2.1\ConsoleApp13.dll
+C:\Curso\ConsoleApp13\ConsoleApp13\bin\Debug\netcoreapp2.1\ConsoleApp13.pdb
+C:\Curso\ConsoleApp13\ConsoleApp13\obj\Debug\netcoreapp2.1\ConsoleApp13.csprojAssemblyReference.cache
+C:\Curso\ConsoleApp13\ConsoleApp13\obj\Debug\netcoreapp2.1\ConsoleApp13.csproj.CoreCompileInputs.cache
+C:\Curso\ConsoleApp13\ConsoleApp13\obj\Debug\netcoreapp2.1\ConsoleApp13.AssemblyInfoInputs.cache
+C:\Curso\ConsoleApp13\ConsoleApp13\obj\Debug\netcoreapp2.1\ConsoleApp13.AssemblyInfo.cs
+C:\Curso\ConsoleApp13\ConsoleApp13\obj\Debug\netcoreapp2.1\ConsoleApp13.dll
+C:\Curso\ConsoleApp13\ConsoleApp13\obj\Debug\netcoreapp2.1\ConsoleApp13.pdb

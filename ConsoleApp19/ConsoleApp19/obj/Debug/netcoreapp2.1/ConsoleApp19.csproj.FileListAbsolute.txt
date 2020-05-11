@@ -1,0 +1,11 @@
+C:\Curso\ConsoleApp19\ConsoleApp19\bin\Debug\netcoreapp2.1\ConsoleApp19.deps.json
+C:\Curso\ConsoleApp19\ConsoleApp19\bin\Debug\netcoreapp2.1\ConsoleApp19.runtimeconfig.json
+C:\Curso\ConsoleApp19\ConsoleApp19\bin\Debug\netcoreapp2.1\ConsoleApp19.runtimeconfig.dev.json
+C:\Curso\ConsoleApp19\ConsoleApp19\bin\Debug\netcoreapp2.1\ConsoleApp19.dll
+C:\Curso\ConsoleApp19\ConsoleApp19\bin\Debug\netcoreapp2.1\ConsoleApp19.pdb
+C:\Curso\ConsoleApp19\ConsoleApp19\obj\Debug\netcoreapp2.1\ConsoleApp19.csprojAssemblyReference.cache
+C:\Curso\ConsoleApp19\ConsoleApp19\obj\Debug\netcoreapp2.1\ConsoleApp19.csproj.CoreCompileInputs.cache
+C:\Curso\ConsoleApp19\ConsoleApp19\obj\Debug\netcoreapp2.1\ConsoleApp19.AssemblyInfoInputs.cache
+C:\Curso\ConsoleApp19\ConsoleApp19\obj\Debug\netcoreapp2.1\ConsoleApp19.AssemblyInfo.cs
+C:\Curso\ConsoleApp19\ConsoleApp19\obj\Debug\netcoreapp2.1\ConsoleApp19.dll
+C:\Curso\ConsoleApp19\ConsoleApp19\obj\Debug\netcoreapp2.1\ConsoleApp19.pdb

@@ -1,0 +1,10 @@
+C:\Curso\Contratos\ConsoleApp5\bin\Debug\netcoreapp2.1\ConsoleApp5.deps.json
+C:\Curso\Contratos\ConsoleApp5\bin\Debug\netcoreapp2.1\ConsoleApp5.runtimeconfig.json
+C:\Curso\Contratos\ConsoleApp5\bin\Debug\netcoreapp2.1\ConsoleApp5.runtimeconfig.dev.json
+C:\Curso\Contratos\ConsoleApp5\bin\Debug\netcoreapp2.1\ConsoleApp5.dll
+C:\Curso\Contratos\ConsoleApp5\bin\Debug\netcoreapp2.1\ConsoleApp5.pdb
+C:\Curso\Contratos\ConsoleApp5\obj\Debug\netcoreapp2.1\ConsoleApp5.csproj.CoreCompileInputs.cache
+C:\Curso\Contratos\ConsoleApp5\obj\Debug\netcoreapp2.1\ConsoleApp5.AssemblyInfoInputs.cache
+C:\Curso\Contratos\ConsoleApp5\obj\Debug\netcoreapp2.1\ConsoleApp5.AssemblyInfo.cs
+C:\Curso\Contratos\ConsoleApp5\obj\Debug\netcoreapp2.1\ConsoleApp5.dll
+C:\Curso\Contratos\ConsoleApp5\obj\Debug\netcoreapp2.1\ConsoleApp5.pdb
