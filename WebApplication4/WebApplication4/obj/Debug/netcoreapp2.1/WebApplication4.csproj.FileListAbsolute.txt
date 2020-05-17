@@ -36,3 +36,7 @@ C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Dep
 C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Departamento\Index.g.cshtml.cs
 C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Vendedor\Index.g.cshtml.cs
 C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Vendedor\Create.g.cshtml.cs
+C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Vendedor\Delete.g.cshtml.cs
+C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Vendedor\Detalhes.g.cshtml.cs
+C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Vendedor\Edit.g.cshtml.cs
+C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\WebApplication4.csprojAssemblyReference.cache
