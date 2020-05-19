@@ -145,12 +145,12 @@ using WebApplication4.Models;
             WriteLiteral("\r\n\t\t</dd>\r\n\t</dl>\r\n\t");
             EndContext();
             BeginContext(719, 188, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2acb97e69744f019c1b80e2b6ec05b9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d1b8a0206b4c42f39a4295e20e613368", async() => {
                 BeginContext(745, 4, true);
                 WriteLiteral("\r\n\t\t");
                 EndContext();
                 BeginContext(749, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "2daad2376d3a4e9780dc02958bb5b84a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "721f06d25d944330a4954ff83d67a492", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -175,7 +175,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n\t\t<input type=\"submit\" value=\"Delete\" class=\"btn btn-danger\" />\r\n\t\t");
                 EndContext();
                 BeginContext(854, 43, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b8fb0959f6394cc2861e8a3aaa756a21", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf0016bd335d42a89556245ae2c3e662", async() => {
                     BeginContext(876, 17, true);
                     WriteLiteral("Voltar para Lista");
                     EndContext();

@@ -9,6 +9,8 @@ using WebApplication4.Models.ViewModel;
 using WebApplication4.Servicos;
 using Microsoft.EntityFrameworkCore;
 using WebApplication4.Servicos.Exception;
+using WebApplication4.Models;
+using System.Diagnostics;
 
 namespace WebApplication4.Controllers
 {
@@ -48,12 +50,12 @@ namespace WebApplication4.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "Id Nulo" });
             }
             var obj = _Seller.FindbyId(id.Value);
             if (obj == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "Objeto Nulo" });
             }
             return View(obj);
         }
@@ -68,12 +70,12 @@ namespace WebApplication4.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "Id Nulo" });
             }
             var obj = _Seller.FindbyId(id.Value);
             if (obj == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "Id Não Encontrado" });
             }
             return View(obj);
         }
@@ -81,12 +83,12 @@ namespace WebApplication4.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "Id Nulo" });
             }
             var obj = _Seller.FindbyId(id.Value);
             if (obj == null)
             {
-                return NotFound();
+                return RedirectToAction(nameof(Error), new { message = "Id Nulo" });
             }
             List<Departamento> departamentos = _departamentoService.FindAll();
             SellerFormViewModel viewmodel = new SellerFormViewModel { Vendedor = obj, Departamentos = departamentos };
@@ -98,18 +100,26 @@ namespace WebApplication4.Controllers
         {
             if (id != obj.Vendedor.Id)
             {
-                return BadRequest();
+                return RedirectToAction(nameof(Error), new { message = "Id Nulo" });
             }
             try
             {
                 _Seller.Atualizar(obj.Vendedor);
             }
-            catch (DBConcurrencyException e)
+            catch (ApplicationException e)
             {
-                throw new DBConcurrencyException(e.Message);
+                return RedirectToAction(nameof(Error), new { mssage = e.Message });
             }
+
             return RedirectToAction(nameof(Index));
 
+        }
+        public IActionResult Error(string message)
+        {
+            var veiwmodel = new ErrorViewModel();
+            veiwmodel.Message = message;
+            veiwmodel.RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+            return View(veiwmodel);
         }
     }
 }
