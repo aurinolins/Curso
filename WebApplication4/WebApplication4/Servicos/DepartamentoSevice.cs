@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using WebApplication4.Models.Entidades;
 
 namespace WebApplication4.Servicos
@@ -15,9 +16,9 @@ namespace WebApplication4.Servicos
             _Context = Context;
         }
 
-        public List<Departamento> FindAll()
+        public async Task<List<Departamento>> FindAllAsync()
         {
-            return _Context.Departamento.OrderBy(x => x.Nome).ToList();
+            return await _Context.Departamento.OrderBy(x => x.Nome).ToListAsync();
         }
     }
 }

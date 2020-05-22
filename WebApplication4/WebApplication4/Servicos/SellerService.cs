@@ -13,50 +13,51 @@ namespace WebApplication4.Servicos
     {
         private readonly WebApplication4Context _Context;
 
-        
+
         public SellerService(WebApplication4Context Context)
         {
             _Context = Context;
         }
 
-        public List<Vendedor> FindAll()
+        public async Task<List<Vendedor>> FindAllAsync()
         {
-            return _Context.Vendedor.ToList();
+            return await _Context.Vendedor.ToListAsync();
         }
-        public void Insert(Vendedor vendedor)
+        public async Task InsertAsync(Vendedor vendedor)
         {
             _Context.Vendedor.Add(vendedor);
-            _Context.SaveChanges();
+            await _Context.SaveChangesAsync();
 
         }
-        public Vendedor FindbyId(int id)
+        public async Task<Vendedor> FindbyIdAsync(int id)
         {
-            return _Context.Vendedor.Include(x => x.Departamento).FirstOrDefault(obj => obj.Id == id);
+            return await _Context.Vendedor.Include(x => x.Departamento).FirstOrDefaultAsync(obj => obj.Id == id);
         }
-        public void Remove(int id)
+        public async Task RemoveAsync(int id)
         {
-            var obj = _Context.Vendedor.Find(id);
+            var obj = await _Context.Vendedor.FindAsync(id);
             _Context.Vendedor.Remove(obj);
-            _Context.SaveChanges();
+            await _Context.SaveChangesAsync();
         }
-        public void  Atualizar(Vendedor obj)
+        public async Task AtualizarAsync(Vendedor obj)
         {
-            if (!_Context.Vendedor.Any(x => x.Id == obj.Id))
+            bool HasAny = await _Context.Vendedor.AnyAsync(x => x.Id == obj.Id);
+                if (!HasAny)
             {
                 throw new NotFoundException("Id Não Encontrado");
 
             }
-           
+
             try
             {
                 _Context.Vendedor.Update(obj);
-                 _Context.SaveChanges();
+                await _Context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException e)
             {
                 throw new DBConcurrencyException(e.Message);
             }
-            
+
         }
     }
 }

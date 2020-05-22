@@ -11,16 +11,23 @@ namespace WebApplication4.Models.Entidades
     public class Vendedor
     {
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "{0} Obrigatoio")]
+        [StringLength(60, MinimumLength = 03, ErrorMessage =  "{0} Invalido - Permitido de {2} até {1}")]
         public string Nome { get; set; }
 
         [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "{0} Obrigatoio")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "{0} Obrigatoio")]
         [Display(Name = "Data de Nascimento")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Nascimento { get; set; }
 
+        [Required(ErrorMessage = "{0} Obrigatoio")]
+        [Range(100.00, 50000.00, ErrorMessage = "{0} deve ser de {1} até {2}")]
         [Display(Name = "Salario Base")]
         [DisplayFormat(DataFormatString = "{0:F2}")]
         public double SalarioBase { get; set; }

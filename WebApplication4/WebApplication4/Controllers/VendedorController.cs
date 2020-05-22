@@ -26,14 +26,14 @@ namespace WebApplication4.Controllers
             _departamentoService = departamentoService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var list = _Seller.FindAll();
+            var list =  await _Seller.FindAllAsync();
             return View(list);
         }
-        public IActionResult Create()
+        public  async Task<IActionResult> Create()
         {
-            var departamentos = _departamentoService.FindAll();
+            var departamentos = await  _departamentoService.FindAllAsync();
             var viewmodel = new SellerFormViewModel { Departamentos = departamentos };
             return View(viewmodel);
         }
@@ -41,18 +41,25 @@ namespace WebApplication4.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Vendedor vendedor)
+        public async Task<IActionResult> Create(Vendedor vendedor)
         {
-            _Seller.Insert(vendedor);
+            if (!ModelState.IsValid)
+            {
+                var departamentos =  await _departamentoService.FindAllAsync();
+                var viewmodel = new SellerFormViewModel {Vendedor = vendedor, Departamentos = departamentos };
+                return View(viewmodel);
+            }
+
+             await _Seller.InsertAsync(vendedor);
             return RedirectToAction(nameof(Index));
         }
-        public IActionResult Delete(int? id)
+        public  async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return RedirectToAction(nameof(Error), new { message = "Id Nulo" });
             }
-            var obj = _Seller.FindbyId(id.Value);
+            var obj =  await _Seller.FindbyIdAsync(id.Value);
             if (obj == null)
             {
                 return RedirectToAction(nameof(Error), new { message = "Objeto Nulo" });
@@ -61,50 +68,58 @@ namespace WebApplication4.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            _Seller.Remove(id);
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+             await _Seller.RemoveAsync(id);
             return RedirectToAction(nameof(Index));
         }
-        public IActionResult Detalhes(int? id)
+        public  async Task<IActionResult> Detalhes(int? id)
         {
             if (id == null)
             {
                 return RedirectToAction(nameof(Error), new { message = "Id Nulo" });
             }
-            var obj = _Seller.FindbyId(id.Value);
+            var obj =  await _Seller.FindbyIdAsync(id.Value);
             if (obj == null)
             {
                 return RedirectToAction(nameof(Error), new { message = "Id Não Encontrado" });
             }
             return View(obj);
         }
-        public IActionResult Edit(int? id)
+        public  async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return RedirectToAction(nameof(Error), new { message = "Id Nulo" });
             }
-            var obj = _Seller.FindbyId(id.Value);
+            var obj =  await _Seller.FindbyIdAsync(id.Value);
             if (obj == null)
             {
                 return RedirectToAction(nameof(Error), new { message = "Id Nulo" });
             }
-            List<Departamento> departamentos = _departamentoService.FindAll();
+            List<Departamento> departamentos =  await  _departamentoService.FindAllAsync();
             SellerFormViewModel viewmodel = new SellerFormViewModel { Vendedor = obj, Departamentos = departamentos };
             return View(viewmodel);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, SellerFormViewModel obj)
+        public async Task<IActionResult> Edit(int id, SellerFormViewModel obj)
         {
             if (id != obj.Vendedor.Id)
             {
                 return RedirectToAction(nameof(Error), new { message = "Id Nulo" });
             }
+            if (!ModelState.IsValid)
+            {
+               return View(obj);
+            }
             try
             {
-                _Seller.Atualizar(obj.Vendedor);
+                 await _Seller.AtualizarAsync(obj.Vendedor);
             }
             catch (ApplicationException e)
             {
