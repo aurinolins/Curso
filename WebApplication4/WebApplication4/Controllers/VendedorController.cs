@@ -74,8 +74,15 @@ namespace WebApplication4.Controllers
             {
                 return RedirectToAction(nameof(Index));
             }
-             await _Seller.RemoveAsync(id);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await _Seller.RemoveAsync(id);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (IntegrityException)
+            {
+                return RedirectToAction(nameof(Error), new { message = "Não pode deleter - Este Vendedor tem Vendas" });
+            }
         }
         public  async Task<IActionResult> Detalhes(int? id)
         {

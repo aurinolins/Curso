@@ -35,14 +35,21 @@ namespace WebApplication4.Servicos
         }
         public async Task RemoveAsync(int id)
         {
-            var obj = await _Context.Vendedor.FindAsync(id);
-            _Context.Vendedor.Remove(obj);
-            await _Context.SaveChangesAsync();
+            try
+            {
+                var obj = await _Context.Vendedor.FindAsync(id);
+                _Context.Vendedor.Remove(obj);
+                await _Context.SaveChangesAsync();
+            }
+            catch(DbUpdateException e)
+            {
+                throw new IntegrityException(e.Message);
+            }
         }
         public async Task AtualizarAsync(Vendedor obj)
         {
             bool HasAny = await _Context.Vendedor.AnyAsync(x => x.Id == obj.Id);
-                if (!HasAny)
+            if (!HasAny)
             {
                 throw new NotFoundException("Id Não Encontrado");
 

@@ -12,6 +12,7 @@ namespace WebApplication4.Models.Entidades
         public double Valor { get; set; }
         public Status Status { get; set; }
         public Vendedor Vendedor { get; set; }
+        public int   VendedorId { get; set; }
 
         public Vendas()
         {

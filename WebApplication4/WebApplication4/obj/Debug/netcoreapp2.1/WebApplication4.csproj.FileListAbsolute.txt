@@ -39,4 +39,6 @@ C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Ven
 C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Vendedor\Delete.g.cshtml.cs
 C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Vendedor\Detalhes.g.cshtml.cs
 C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Vendedor\Edit.g.cshtml.cs
-C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\WebApplication4.csprojAssemblyReference.cache
+C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Vendas\Index.g.cshtml.cs
+C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Vendas\BuscaSimples.g.cshtml.cs
+C:\Curso\WebApplication4\WebApplication4\obj\Debug\netcoreapp2.1\Razor\Views\Vendas\BuscaAgrupada.g.cshtml.cs

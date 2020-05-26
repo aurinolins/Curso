@@ -16,6 +16,7 @@ using WebApplication4.Models;
 using WebApplication4.Models.Entidades;
 using WebApplication4.Data;
 using WebApplication4.Servicos;
+using WebApplication4.Servicos.SalesService;
 
 namespace WebApplication4
 {
@@ -49,6 +50,7 @@ namespace WebApplication4
             services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>();
             services.AddScoped<DepartamentoSevice>();
+            services.AddScoped<SalesService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
