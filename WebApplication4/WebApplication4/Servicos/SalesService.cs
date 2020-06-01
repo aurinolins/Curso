@@ -35,5 +35,38 @@ namespace WebApplication4.Servicos.SalesService
                 ToListAsync();
                
         }
+        public async Task<List<IGrouping<Departamento , Vendas>>> FindByDateGroupAsync
+            (DateTime? datamin, DateTime? datamax,int? departamentoId, int? vendedorId)
+        {
+            var result = from obj in _Context.Vendas select obj;
+
+            if (datamin.HasValue)
+            {
+                result = result.Where(x => x.Data >= datamin.Value);
+            }
+            if (datamax.HasValue)
+            {
+                result = result.Where(x => x.Data <= datamax.Value);
+            }
+            
+            if (vendedorId.HasValue)
+            {
+                result = result.Where(x => x.VendedorId == vendedorId);
+            }
+            
+            if (departamentoId.HasValue)
+            {
+                result = result.Where(x => x.Vendedor.DepartamentoId == departamentoId);
+            }
+       
+            return await result
+                .Include(x => x.Vendedor)
+                .Include(x => x.Vendedor.Departamento)
+                .OrderByDescending(x => x.Data)
+                .GroupBy(x => x.Vendedor.Departamento)
+                .ToListAsync();
+
+        }
     }
 }
+

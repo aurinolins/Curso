@@ -1,4 +1,4 @@
-﻿
+﻿@model WebApplication4.Models.ViewModel.SalesFormViewModel
 @{
 	ViewData["Title"] = "Index";
 }
@@ -11,10 +11,10 @@
 			<fieldset>
 				<legend>Busca Simples</legend>
 				<div class="form-group">
-					<label for="minDate" class="control-label">MinDate</label>
-					<input type="date" name="minDate" class="form-control" />
-					<label for="maxDate" class="control-label">MaxDate</label>
-					<input type="date" name="maxDate" class="form-control" />
+					<label for="datamin" class="control-label">Data Minima</label>
+					<input type="date" name="datamin" class="form-control" />
+					<label for="datamax" class="control-label">Data Maxima</label>
+					<input type="date" name="datamin" class="form-control" />
 					<div class="form-group">
 						<input type="submit" value="Chamar" class="btn btn-default" />
 						<a asp-action="Index">Voltar para tela Principal</a>
@@ -26,9 +26,9 @@
 			<fieldset>
 				<legend>Busca Agrupada</legend>
 				<div class="form-group">
-					<label for="minDate" class="control-label">MinDate</label>
+					<label for="datamin" class="control-label">Data Mínima</label>
 					<input type="date" name="minDate" class="form-control" />
-					<label for="maxDate" class="control-label">MaxDate</label>
+					<label for="datamax" class="control-label">Data Maxima</label>
 					<input type="date" name="maxDate" class="form-control" />
 				</div>
 				<div class="form-group">

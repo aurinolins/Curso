@@ -56,7 +56,9 @@ namespace WebApplication4.Models.Entidades
         }
         public double TotalVendas(DateTime dataincio , DateTime datafinal)
         {
-            return Vendas.Where(P => P.Data >= dataincio && P.Data <= datafinal).Select(P => P.Valor).Sum();
+          /*  return Vendas.Where(P => P.Data >= dataincio && P.Data <= datafinal).Select(P => P.Valor).Sum();
+           *  */
+            return Vendas.Select(P => P.Valor).Sum();
         }
     }
 }
